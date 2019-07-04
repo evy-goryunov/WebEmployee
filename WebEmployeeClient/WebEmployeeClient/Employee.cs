@@ -15,29 +15,29 @@ namespace WebEmployeeClient
 		public int _salary { get; set; }       //Зарплата
 		public int _age { get; set; }          //Возраст
 
-		public Employee()
-		{
+		//public Employee()
+		//{
 
-		}
+		//}
 
-		public Employee(string firstName, string sureName, string department, int id, int salary, int age)
-		{
-			this._firstName = firstName;
-			this._sureName = sureName;
-			this._salary = salary;
-			this._department = department;
-			this._age = age;
-			this._id = id;
-		}
+		//public Employee(string firstName, string sureName, string department, int id, int salary, int age)
+		//{
+		//	this._firstName = firstName;
+		//	this._sureName = sureName;
+		//	this._salary = salary;
+		//	this._department = department;
+		//	this._age = age;
+		//	this._id = id;
+		//}
 
-		public Employee(string firstName, string sureName, string department, int salary, int age)
-		{
-			this._firstName = firstName;
-			this._sureName = sureName;
-			this._salary = salary;
-			this._department = department;
-			this._age = age;
-		}
+		//public Employee(string firstName, string sureName, string department, int salary, int age)
+		//{
+		//	this._firstName = firstName;
+		//	this._sureName = sureName;
+		//	this._salary = salary;
+		//	this._department = department;
+		//	this._age = age;
+		//}
 
 
 	}

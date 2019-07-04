@@ -8,12 +8,27 @@ using WebEmployeeService.Models;
 
 namespace WebEmployeeService.Controllers
 {
-    public class EmployeeController : ApiController
-    {
+	public class EmployeeController : ApiController
+	{
+		private DataBase data = new DataBase();
 
-		Employee[] _employee = new Employee[] 
+		[Route("getlist")]
+		public List<Employee> Get() => data.GetList();
+
+		[Route("getlist/{id}")]
+		public Employee GetEmployee(int id) => data.GetEmployeeById(id);
+
+		[Route("addemployee")]
+		public HttpResponseMessage Post([FromBody]Employee value)
 		{
-
-		};
-    }
+			if (data.AddEmployee(value))
+			{
+				return Request.CreateResponse(HttpStatusCode.Created);
+			}
+			else
+			{
+				return Request.CreateResponse(HttpStatusCode.BadRequest);
+			}
+		}
+	}
 }

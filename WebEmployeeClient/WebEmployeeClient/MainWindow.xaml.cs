@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,11 +24,22 @@ namespace WebEmployeeClient
 		public MainWindow()
 		{
 			InitializeComponent();
-			DataBase db = new DataBase();
-			//Employee newEmp = new Employee("Горюнов","Евгений","IT",31,999);
-			//DataBase.dbEmployee.Add(newEmp);
-			DataBase.ReadFromBD();
-			LvEmp.ItemsSource = DataBase.dbEmployee;
+
+			string obj = "qwe";
+
+			HttpClient client = new HttpClient();
+
+			string url = "http://localhost:65417/addemployee";
+			string url2 = "http://localhost:65417/getlist";
+			string url3 = "http://localhost:65417/getlist/id";
+
+			HttpContent content = new StringContent(obj, Encoding.UTF8, "application/json");
+
+			var res = client.PostAsync(url, content).Result;
+
+			var res2 = client.GetAsync(url2).Result;
+
+			var res3 = client.GetAsync(url3).Result;
 		}
 	}
 }
