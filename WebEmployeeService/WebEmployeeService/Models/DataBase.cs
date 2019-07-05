@@ -14,9 +14,12 @@ namespace WebEmployeeService.Models
 		public DataBase()
 		{
 			string connectionPath = @"Data Source=(localdb)\MSSQLLocalDB;
-									Initial Catalog=EmployeeDB;
-									Integrated Security=True;
-									Pooling=False";
+										Initial Catalog=Lesson7;
+										Integrated Security=True;
+										Connect Timeout=30;Encrypt=False;
+										TrustServerCertificate=False;
+										ApplicationIntent=ReadWrite;
+										MultiSubnetFailover=False";
 			sqlConnection = new SqlConnection(connectionPath);
 			sqlConnection.Open();
 		}

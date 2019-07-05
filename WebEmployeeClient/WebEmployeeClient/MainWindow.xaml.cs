@@ -24,22 +24,20 @@ namespace WebEmployeeClient
 		public MainWindow()
 		{
 			InitializeComponent();
+			Data myData = new Data();
+			myData.getData();
+			LvEmp.ItemsSource = Data.emp;
 
-			string obj = "qwe";
 
-			HttpClient client = new HttpClient();
+			//string obj = "qwe";
 
-			string url = "http://localhost:65417/addemployee";
-			string url2 = "http://localhost:65417/getlist";
-			string url3 = "http://localhost:65417/getlist/id";
+			//HttpClient client = new HttpClient();
 
-			HttpContent content = new StringContent(obj, Encoding.UTF8, "application/json");
+			//string url = "http://localhost:65417/addemployee";
 
-			var res = client.PostAsync(url, content).Result;
+			//HttpContent content = new StringContent(obj, Encoding.UTF8, "application/json");
 
-			var res2 = client.GetAsync(url2).Result;
-
-			var res3 = client.GetAsync(url3).Result;
+			//var res = client.PostAsync(url, content).Result;
 		}
 	}
 }

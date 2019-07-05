@@ -15,6 +15,11 @@ namespace WebEmployeeClient
 		public int _salary { get; set; }       //Зарплата
 		public int _age { get; set; }          //Возраст
 
+		//public override string ToString()
+		//{
+		//	return $"{_sureName}{_firstName}{_id}";
+		//}
+
 		//public Employee()
 		//{
 
