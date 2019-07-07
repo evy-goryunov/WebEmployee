@@ -33,5 +33,16 @@
 				</ListView.View>
 			</ListView>
 		</StackPanel>
+		<TextBox x:Name="SureName" HorizontalAlignment="Left" Height="23" Margin="631,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+		<TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="631,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+		<TextBox x:Name="Department" HorizontalAlignment="Left" Height="23" Margin="631,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+		<TextBox x:Name="Salary" HorizontalAlignment="Left" Height="23" Margin="631,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+		<TextBox x:Name="Age" HorizontalAlignment="Left" Height="23" Margin="631,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+		<Label Content="Фамилия" HorizontalAlignment="Left" Margin="631,19,0,0" VerticalAlignment="Top"/>
+		<Label Content="Имя" HorizontalAlignment="Left" Margin="631,79,0,0" VerticalAlignment="Top"/>
+		<Label Content="Отдел" HorizontalAlignment="Left" Margin="631,142,0,0" VerticalAlignment="Top"/>
+		<Label Content="Зарплата" HorizontalAlignment="Left" Margin="631,204,0,0" VerticalAlignment="Top"/>
+		<Label Content="Возраст" HorizontalAlignment="Left" Margin="631,267,0,0" VerticalAlignment="Top"/>
+		<Button x:Name="AddBtn" Content="Добавить" HorizontalAlignment="Left" Margin="631,354,0,0" VerticalAlignment="Top" Width="75"/>
 	</Grid>
 </Window>

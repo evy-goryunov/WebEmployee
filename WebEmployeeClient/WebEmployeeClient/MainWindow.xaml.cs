@@ -19,7 +19,7 @@ namespace WebEmployeeClient
 	/// <summary>
 	/// Логика взаимодействия для MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class MainWindow : Window, IView
 	{
 		public MainWindow()
 		{
@@ -27,17 +27,35 @@ namespace WebEmployeeClient
 			Data myData = new Data();
 			myData.getData();
 			LvEmp.ItemsSource = Data.emp;
+		}
 
-
-			//string obj = "qwe";
-
-			//HttpClient client = new HttpClient();
-
-			//string url = "http://localhost:65417/addemployee";
-
-			//HttpContent content = new StringContent(obj, Encoding.UTF8, "application/json");
-
-			//var res = client.PostAsync(url, content).Result;
+		public string firstName //Имя
+		{
+			get => FirstName.Text;
+			set
+			{
+				FirstName.Text = value;
+			}
+		}
+		public string department //Отчество
+		{
+			get => Department.Text;
+			set => Department.Text = value;
+		}
+		public string sureName //Фамилия
+		{
+			get => SureName.Text;
+			set => SureName.Text = value;
+		}
+		public string salary //Зарплата
+		{
+			get => Age.Text;
+			set => Age.Text = value;
+		}
+		public string age //Возраст
+		{
+			get => Age.Text;
+			set => Age.Text = value;
 		}
 	}
 }
